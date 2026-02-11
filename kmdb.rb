@@ -177,6 +177,6 @@ puts "===================="
 puts ""
 
 # Query the actor data and loop through the results to display the agent's list of represented actors output.
-Actor.where.not(agent_id: nil).each do |actor|
+Actor.where.not(agent_id: nil).order(:name).each do |actor|
   puts actor.name
 end
